@@ -1,1 +1,5 @@
-*.re linguist-language=Reason
+# .res and .resi are ReScript
+*.res linguist-language=ReScript
+*.resi linguist-language=ReScript
+# and the bsconfig is jsonc
+bsconfig.json linguist-language=jsonc

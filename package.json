@@ -1,33 +1,35 @@
 {
-  "name": "bs-mocha",
-  "version": "1.0.0",
-  "description": "Bucklescript bindings for mocha",
+  "name": "rescript-mocha",
+  "version": "0.9.0",
+  "description": "ReScript bindings for mocha",
   "repository": {
     "type": "git",
-    "url": "git@github.com:reasonml-community/bs-mocha.git"
+    "url": "git://github.com/TheSpyder/rescript-mocha.git"
   },
+  "homepage": "https://github.com/TheSpyder/rescript-mocha",
+  "bugs": "https://github.com/TheSpyder/rescript-mocha/issues",
   "scripts": {
-    "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w",
-    "start": "bsb -make-world -w",
-    "test": "./node_modules/.bin/mocha lib/js/test/Test_*"
+    "clean": "rescript clean",
+    "build": "rescript",
+    "watch": "rescript build -w",
+    "start": "rescript build -w",
+    "test": "mocha lib/js/test/Test_*"
   },
-  "homepage": "https://github.com/reasonml-community/bs-mocha",
-  "bugs": "https://github.com/reasonml-community/bs-mocha/issues",
   "keywords": [
     "BuckleScript",
-    "reason"
+    "reason",
+    "ReScript"
   ],
+  "author": "Andrew Herron",
   "contributors": [
     "Hongbo Zhang",
     "Risto Stevcev"
   ],
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^5.0.0"
+    "rescript": "^9.1.4"
   },
   "dependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^9.2.2"
   }
 }
