@@ -1,6 +1,6 @@
 ## Unreleased
 
-I'm planning to review the API and look at what is worth updating to ReScript best practices given `bs-mocha` was created 6 years ago.
+Before cutting a 1.0 version I'm planning to review the API and look at what is worth updating. ReScript best practices have changed a lot since `bs-mocha` was created 6 years ago.
 
 ## Released
 
