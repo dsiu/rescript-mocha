@@ -13,7 +13,15 @@
     "build": "rescript",
     "watch": "rescript build -w",
     "start": "rescript build -w",
-    "test": "mocha lib/js/test/Test_*"
+    "test": "rescript && mocha",
+    "prepublishOnly": "yarn clean && yarn test"
+  },
+  "mocha": {
+    "recursive": true,
+    "reporter": "progress",
+    "spec": [
+      "test"
+    ]
   },
   "keywords": [
     "BuckleScript",

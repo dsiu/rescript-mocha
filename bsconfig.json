@@ -13,12 +13,12 @@
   ],
   "package-specs": {
     "module": "es6",
-    "in-source": true
+    "in-source": true,
+    "suffix": ".mjs"
   },
-  "suffix": ".bs.js",
   "warnings": {
-    "number": "-102",
-    "error": "+8+27"
+    "number": "A-4-40-41-42-43+101-102-103",
+    "error": true
   },
   "bs-dependencies": []
 }
