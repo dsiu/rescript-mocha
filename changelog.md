@@ -6,4 +6,4 @@ I'm planning to review the API and look at what is worth updating to ReScript be
 
 ### 0.9.0
 
-Initial release after rename; no changes
+Initial release after rename; no changes. Just updated the mocha dependency to v9.
