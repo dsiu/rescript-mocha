@@ -9,10 +9,10 @@ describe("Mocha", () => {
   describe("Success", () =>
     describe("List", () => {
       it("should map the values", () =>
-        Assert.deep_equal(Array.map([1, 2, 3], (i) => i * 2), [2, 4, 6])
+        Assert.deepEqual(Array.map([1, 2, 3], (i) => i * 2), [2, 4, 6])
       )
 
-      it("should work with an empty list", () => Assert.deep_equal(Array.map([], (i) => i * 2), []))
+      it("should work with an empty list", () => Assert.deepEqual(Array.map([], (i) => i * 2), []))
     })
   )
 
@@ -21,21 +21,21 @@ describe("Mocha", () => {
   describe("Hooks", () => {
     let hooks = ref({
       "before": false,
-      "before_each": 0,
+      "beforeEach": 0,
       "after": false,
-      "after_each": 0,
+      "afterEach": 0,
     })
 
-    before(() => hooks := {"before": true, "before_each": 0, "after": false, "after_each": 0})
+    before(() => hooks := {"before": true, "beforeEach": 0, "after": false, "afterEach": 0})
 
-    before_each(() => {
+    beforeEach(() => {
       let hooks' = hooks.contents
       hooks :=
         {
           "before": hooks'["before"],
-          "before_each": hooks'["before_each"] + 1,
+          "beforeEach": hooks'["beforeEach"] + 1,
           "after": hooks'["after"],
-          "after_each": hooks'["after_each"],
+          "afterEach": hooks'["afterEach"],
         }
     })
 
@@ -43,14 +43,14 @@ describe("Mocha", () => {
     it("is the second test", () => ())
     it("is the third test", () => ())
 
-    after_each(() => {
+    afterEach(() => {
       let hooks' = hooks.contents
       hooks :=
         {
           "before": hooks'["before"],
-          "before_each": hooks'["before_each"],
+          "beforeEach": hooks'["beforeEach"],
           "after": hooks'["after"],
-          "after_each": hooks'["after_each"] + 1,
+          "afterEach": hooks'["afterEach"] + 1,
         }
     })
 
@@ -59,16 +59,16 @@ describe("Mocha", () => {
       hooks :=
         {
           "before": hooks'["before"],
-          "before_each": hooks'["before_each"],
+          "beforeEach": hooks'["beforeEach"],
           "after": true,
-          "after_each": hooks'["after_each"],
+          "afterEach": hooks'["afterEach"],
         }
 
       /* TODO: this is pretty ugly, caused by (facebook/reason issue #2108) */
       let hooks'' = hooks.contents
       Assert.ok(hooks''["before"])
-      Assert.equal(hooks''["before_each"], 3)
-      Assert.equal(hooks''["after_each"], 3)
+      Assert.equal(hooks''["beforeEach"], 3)
+      Assert.equal(hooks''["afterEach"], 3)
       Assert.ok(hooks''["after"])
     })
   })

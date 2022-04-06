@@ -1,4 +1,4 @@
-module Labels = {
+
   @module("assert")
   external equal: (~actual: 'a, ~expected: 'a, ~message: string=?) => unit = "equal"
   @module("assert")
@@ -40,31 +40,3 @@ module Labels = {
     ~operator: string=?,
     ~stackStartFn: 'b => 'c=?,
   ) => unit = "fail"
-}
-
-let equal = (~message=?, actual, expected) => Labels.equal(~actual, ~expected, ~message?)
-and notEqual = (~message=?, actual, expected) => Labels.notEqual(~actual, ~expected, ~message?)
-
-let deepEqual = (~message=?, actual, expected) => Labels.deepEqual(~actual, ~expected, ~message?)
-and notDeepEqual = (~message=?, actual, expected) =>
-  Labels.notDeepEqual(~actual, ~expected, ~message?)
-
-let deepStrictEqual = (~message=?, actual, expected) =>
-  Labels.deepStrictEqual(~actual, ~expected, ~message?)
-and notDeepStrictEqual = (~message=?, actual, expected) =>
-  Labels.notDeepStrictEqual(~actual, ~expected, ~message?)
-
-let strictEqual = (~message=?, actual, expected) =>
-  Labels.strictEqual(~actual, ~expected, ~message?)
-and notStrictEqual = (~message=?, actual, expected) =>
-  Labels.notStrictEqual(~actual, ~expected, ~message?)
-
-let ifError = value => Labels.ifError(~value)
-
-let ok = value => Labels.ok(~value)
-and fail = message => Labels.fail(~message)
-and fail' = (~message=?, ~operator=?, ~stackStartFn=?, actual, expected) =>
-  Labels.fail'(~actual, ~expected, ~message?, ~operator?, ~stackStartFn?)
-
-let throws = (~message=?, block, error) => Labels.throws(~block, ~error, ~message?)
-and doesNotThrow = (~message=?, block, error) => Labels.doesNotThrow(~block, ~error, ~message?)

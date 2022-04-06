@@ -22,27 +22,27 @@ describe("Async", () => {
   describe("Hooks", () => {
     let hooks = ref({
       "before": false,
-      "before_each": 0,
+      "beforeEach": 0,
       "after": false,
-      "after_each": 0,
+      "afterEach": 0,
     })
 
     before(done_ =>
       delay(() => {
-        hooks := {"before": true, "before_each": 0, "after": false, "after_each": 0}
+        hooks := {"before": true, "beforeEach": 0, "after": false, "afterEach": 0}
         done_()
       })
     )
 
-    before_each(done_ =>
+    beforeEach(done_ =>
       delay(() => {
         let hooks' = hooks.contents
         hooks :=
           {
             "before": hooks'["before"],
-            "before_each": hooks'["before_each"] + 1,
+            "beforeEach": hooks'["beforeEach"] + 1,
             "after": hooks'["after"],
-            "after_each": hooks'["after_each"],
+            "afterEach": hooks'["afterEach"],
           }
         done_()
       })
@@ -52,15 +52,15 @@ describe("Async", () => {
     it("is the second test", done_ => done_())
     it("is the third test", done_ => done_())
 
-    after_each(done_ =>
+    afterEach(done_ =>
       delay(() => {
         let hooks' = hooks.contents
         hooks :=
           {
             "before": hooks'["before"],
-            "before_each": hooks'["before_each"],
+            "beforeEach": hooks'["beforeEach"],
             "after": hooks'["after"],
-            "after_each": hooks'["after_each"] + 1,
+            "afterEach": hooks'["afterEach"] + 1,
           }
         done_()
       })
@@ -72,16 +72,16 @@ describe("Async", () => {
         hooks :=
           {
             "before": hooks'["before"],
-            "before_each": hooks'["before_each"],
+            "beforeEach": hooks'["beforeEach"],
             "after": true,
-            "after_each": hooks'["after_each"],
+            "afterEach": hooks'["afterEach"],
           }
 
         /* TODO: this is pretty ugly, caused by (facebook/reason issue #2108) */
         let hooks'' = hooks.contents
         Assert.ok(hooks''["before"])
-        Assert.equal(hooks''["before_each"], 3)
-        Assert.equal(hooks''["after_each"], 3)
+        Assert.equal(hooks''["beforeEach"], 3)
+        Assert.equal(hooks''["afterEach"], 3)
         Assert.ok(hooks''["after"])
         done_()
       })
