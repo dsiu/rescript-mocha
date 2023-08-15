@@ -114,7 +114,7 @@ module Promise = {
   }
 )
 /* Wraps the options normally set with `this` in mocha and makes them optional arguments */
-let make: Fn_Type.internal_nullary<'result> => Fn_Type.test<unit, 'result> = (
+let make = (
   fn,
   description,
   ~timeout=?,
@@ -126,7 +126,7 @@ let make: Fn_Type.internal_nullary<'result> => Fn_Type.test<unit, 'result> = (
     applyOptions(~timeout?, ~retries?, ~slow?, mocha)
     done_callback()
   })
-let makeAnon: Fn_Type.internal_anon<'result> => Fn_Type.fn_anon<unit, 'result> = (
+let makeAnon = (
   fn,
   ~timeout=?,
   ~retries=?,
@@ -138,7 +138,7 @@ let makeAnon: Fn_Type.internal_anon<'result> => Fn_Type.fn_anon<unit, 'result> =
     done_callback()
   })
 
-let makeAsync: Fn_Type.internal_callback => Fn_Type.test<(~error: Js.Exn.t=?, unit) => unit, unit> = (
+let makeAsync = (
   fn,
   description,
   ~timeout=?,
@@ -153,10 +153,7 @@ let makeAsync: Fn_Type.internal_callback => Fn_Type.test<(~error: Js.Exn.t=?, un
     done_callback(done_fn)
   })
 
-let makeAsyncAnon: Fn_Type.internal_callback_anon => Fn_Type.fn_anon<
-  (~error: Js.Exn.t=?, unit) => unit,
-  unit,
-> = (fn, ~timeout=?, ~retries=?, ~slow=?, done_callback) =>
+let makeAsyncAnon = (fn, ~timeout=?, ~retries=?, ~slow=?, done_callback) =>
   fn(.@this (mocha, done_callback') => {
     applyOptions(~timeout?, ~retries?, ~slow?, mocha)
 
