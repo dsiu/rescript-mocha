@@ -35,7 +35,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "rescript": "^11.1.0"
+    "rescript": "^11.1.1"
   },
   "dependencies": {
     "mocha": "^9.2.2"
