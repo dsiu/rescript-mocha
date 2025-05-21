@@ -1,5 +1,5 @@
 type rec mocha
-and done_callback = Js.Nullable.t<Js.Exn.t> => unit
+and done_callback = Js.Nullable.t<JsExn.t> => unit
 and test_fn<'arg, 'result> = (string, @this (mocha, 'arg) => 'result) => unit
 
 module Fn_Type = {

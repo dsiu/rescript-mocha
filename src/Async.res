@@ -1,5 +1,5 @@
-type rec test_fn = Internal.Fn_Type.test<(~error: Js.Exn.t=?, unit) => unit, unit>
-and hook = Internal.Fn_Type.fn_anon<(~error: Js.Exn.t=?, unit) => unit, unit>
+type rec test_fn = Internal.Fn_Type.test<(~error: JsExn.t=?, unit) => unit, unit>
+and hook = Internal.Fn_Type.fn_anon<(~error: JsExn.t=?, unit) => unit, unit>
 
 let it = (description, ~timeout=?, ~retries=?, ~slow=?, done_callback) =>
   Internal.makeAsync(Internal.Async.it, description, ~timeout?, ~retries?, ~slow?, done_callback)

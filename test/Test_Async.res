@@ -14,7 +14,7 @@ describe("Async", () => {
 
   describe("Error", () =>
     it_skip("should error out", done_ => {
-      let error: Js.Exn.t = %raw(` new Error("error out") `)
+      let error: JsExn.t = %raw(` new Error("error out") `)
       done_(~error, ())
     })
   )

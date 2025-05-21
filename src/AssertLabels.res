@@ -25,9 +25,9 @@
   @module("assert") external ifError: (~value: 'a) => unit = "ifError"
 
   @module("assert")
-  external throws: (~block: 'a => 'b, ~error: Js.Exn.t, ~message: string=?) => unit = "throws"
+  external throws: (~block: 'a => 'b, ~error: JsExn.t, ~message: string=?) => unit = "throws"
   @module("assert")
-  external doesNotThrow: (~block: 'a => 'b, ~error: Js.Exn.t, ~message: string=?) => unit =
+  external doesNotThrow: (~block: 'a => 'b, ~error: JsExn.t, ~message: string=?) => unit =
     "doesNotThrow"
 
   @module("assert") external ok: (~value: 'a) => unit = "ok"
