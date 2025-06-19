@@ -74,9 +74,9 @@ describe("Mocha", () => {
   })
 
   describe("Timeout", ~timeout=50, () => {
-    it_skip'("should time out", done_ => Js.Global.setTimeout(() => done_(), 51) |> ignore)
+    it_skip'("should time out", done_ => Js.Global.setTimeout(() => done_(), 51) -> ignore)
 
-    it'("should not time out", done_ => Js.Global.setTimeout(() => done_(), 40) |> ignore)
+    it'("should not time out", done_ => Js.Global.setTimeout(() => done_(), 40) -> ignore)
 
     it_skip("should time out", ~timeout=1, () => {
       let result = ref(1)

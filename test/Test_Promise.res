@@ -14,7 +14,7 @@ describe("Promise", () => {
     Js.Promise.make((~resolve, ~reject as _) => Js.Global.setTimeout(() => {
         fn()
         resolve(. true)
-      }, 300) |> ignore)
+      }, 300) -> ignore)
 
   /* Rejects the promise after a small delay */
   let delay_reject = () =>
@@ -22,7 +22,7 @@ describe("Promise", () => {
       Js.Global.setTimeout(
         () => reject(. RejectedError("promise successfully rejected")),
         300,
-      ) |> ignore
+      ) -> ignore
     )
 
   describe("Success", () => it("should be successful", () => delay(() => Assert.equal(3, 3))))
@@ -95,13 +95,13 @@ describe("Promise", () => {
   describe("Timeout", () => {
     it_skip("should time out", ~timeout=50, () =>
       Js.Promise.make((~resolve, ~reject as _) =>
-        Js.Global.setTimeout(() => resolve(. true), 51) |> ignore
+        Js.Global.setTimeout(() => resolve(. true), 51) -> ignore
       )
     )
 
     it("should not time out", ~timeout=50, () =>
       Js.Promise.make((~resolve, ~reject as _) =>
-        Js.Global.setTimeout(() => resolve(. true), 40) |> ignore
+        Js.Global.setTimeout(() => resolve(. true), 40) -> ignore
       )
     )
   })
@@ -128,7 +128,7 @@ describe("Promise", () => {
   describe("Slow", () =>
     it("should be considered slow", ~slow=50, () =>
       Js.Promise.make((~resolve, ~reject as _) =>
-        Js.Global.setTimeout(() => resolve(. true), 60) |> ignore
+        Js.Global.setTimeout(() => resolve(. true), 60) -> ignore
       )
     )
   )
