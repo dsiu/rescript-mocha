@@ -57,37 +57,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rescript/darwin-arm64@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "@rescript/darwin-arm64@npm:12.0.0-beta.2"
+"@rescript/darwin-arm64@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "@rescript/darwin-arm64@npm:12.0.0-beta.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rescript/darwin-x64@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "@rescript/darwin-x64@npm:12.0.0-beta.2"
+"@rescript/darwin-x64@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "@rescript/darwin-x64@npm:12.0.0-beta.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@rescript/linux-arm64@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "@rescript/linux-arm64@npm:12.0.0-beta.2"
+"@rescript/linux-arm64@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "@rescript/linux-arm64@npm:12.0.0-beta.3"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rescript/linux-x64@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "@rescript/linux-x64@npm:12.0.0-beta.2"
+"@rescript/linux-x64@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "@rescript/linux-x64@npm:12.0.0-beta.3"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@rescript/win32-x64@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "@rescript/win32-x64@npm:12.0.0-beta.2"
+"@rescript/win32-x64@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "@rescript/win32-x64@npm:12.0.0-beta.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1149,19 +1149,19 @@ __metadata:
   resolution: "rescript-mocha@workspace:."
   dependencies:
     mocha: "npm:^9.2.2"
-    rescript: "npm:^12.0.0-beta.2"
+    rescript: "npm:^12.0.0-beta.3"
   languageName: unknown
   linkType: soft
 
-"rescript@npm:^12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "rescript@npm:12.0.0-beta.2"
+"rescript@npm:^12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "rescript@npm:12.0.0-beta.3"
   dependencies:
-    "@rescript/darwin-arm64": "npm:12.0.0-beta.2"
-    "@rescript/darwin-x64": "npm:12.0.0-beta.2"
-    "@rescript/linux-arm64": "npm:12.0.0-beta.2"
-    "@rescript/linux-x64": "npm:12.0.0-beta.2"
-    "@rescript/win32-x64": "npm:12.0.0-beta.2"
+    "@rescript/darwin-arm64": "npm:12.0.0-beta.3"
+    "@rescript/darwin-x64": "npm:12.0.0-beta.3"
+    "@rescript/linux-arm64": "npm:12.0.0-beta.3"
+    "@rescript/linux-x64": "npm:12.0.0-beta.3"
+    "@rescript/win32-x64": "npm:12.0.0-beta.3"
   dependenciesMeta:
     "@rescript/darwin-arm64":
       optional: true
@@ -1179,7 +1179,7 @@ __metadata:
     rescript: cli/rescript.js
     rescript-legacy: cli/rescript-legacy.js
     rescript-tools: cli/rescript-tools.js
-  checksum: 10c0/21497cbad7b824dd29bfb2e433fb84641a1e672eff75ea47892d0e86ca6117e856fe458c7dbe0abf658780a41765996568783e40836688154a5f6a2d2765c160
+  checksum: 10c0/da264d99199f600dcaf78d8907b70200333dc1cc3a45a52f2fa2c72e2f5f393a8dedd01ebbcf46de94cbbe59a997a4685d6e20648739cd2234560cfb94cd7832
   languageName: node
   linkType: hard
 
