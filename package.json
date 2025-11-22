@@ -13,7 +13,7 @@
     "build": "rescript",
     "watch": "rescript watch",
     "start": "rescript watch",
-    "test": "rescript --dev && mocha",
+    "test": "rescript && mocha",
     "prepublishOnly": "yarn clean && yarn test"
   },
   "mocha": {
@@ -35,10 +35,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "rescript": "^12.0.0-rc.3"
+    "rescript": "^12.0.0-rc.5"
   },
   "dependencies": {
     "mocha": "^9.2.2"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.11.0"
 }
