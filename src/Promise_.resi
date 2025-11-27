@@ -1,5 +1,5 @@
-type rec test_fn<'a> = Internal.Fn_Type.test<unit, Js.Promise.t<'a>>
-and hook<'a> = Internal.Fn_Type.fn_anon<unit, Js.Promise.t<'a>>
+type rec test_fn<'a> = Internal.Fn_Type.test<unit, promise<'a>>
+and hook<'a> = Internal.Fn_Type.fn_anon<unit, promise<'a>>
 
 let it: test_fn<'a>
 let it_only: test_fn<'a>

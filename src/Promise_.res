@@ -1,5 +1,5 @@
-type rec test_fn<'a> = Internal.Fn_Type.test<unit, Js.Promise.t<'a>>
-and hook<'a> = Internal.Fn_Type.fn_anon<unit, Js.Promise.t<'a>>
+type rec test_fn<'a> = Internal.Fn_Type.test<unit, promise<'a>>
+and hook<'a> = Internal.Fn_Type.fn_anon<unit, promise<'a>>
 
 let it = (description, ~timeout=?, ~retries=?, ~slow=?, done_callback) =>
   Internal.make(Internal.Promise.it, description, ~timeout?, ~retries?, ~slow?, done_callback)

@@ -8,11 +8,11 @@ ReScript bindings for mocha
 npm install rescript-mocha --save-dev 
 ```
 
-## Usage 
+## Usage
 
 ```rescript
 open RescriptMocha
-let {it:it', it_skip:it_skip'} = module (Promise)
+let {it:it', it_skip:it_skip'} = module (Promise_)
 open Mocha
 open Belt
 
