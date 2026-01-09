@@ -38,16 +38,16 @@ module This = {
 module Sync = {
   @val @scope("globalThis")
   external describe: (string, @this (mocha => unit)) => unit = "describe"
-  @val @scope("globalThis")
-  external describe_only: (string, @this (mocha => unit)) => unit = "describe.only"
-  @val @scope("globalThis")
-  external describe_skip: (string, @this (mocha => unit)) => unit = "describe.skip"
+  @val @scope(("globalThis", "describe"))
+  external describe_only: (string, @this (mocha => unit)) => unit = "only"
+  @val @scope(("globalThis", "describe"))
+  external describe_skip: (string, @this (mocha => unit)) => unit = "skip"
   @val @scope("globalThis")
   external it: (string, @this (mocha => unit)) => unit = "it"
-  @val @scope("globalThis")
-  external it_only: (string, @this (mocha => unit)) => unit = "it.only"
   @val @scope(("globalThis", "it"))
-  external it_skip: (string, @this (mocha => unit)) => unit = "it.skip"
+  external it_only: (string, @this (mocha => unit)) => unit = "only"
+  @val @scope(("globalThis", "it"))
+  external it_skip: (string, @this (mocha => unit)) => unit = "skip"
   @val @scope("globalThis")
   external before: (@this (mocha => unit)) => unit = "before"
   @val @scope("globalThis")
@@ -61,10 +61,10 @@ module Sync = {
 module Async = {
   @val @scope("globalThis")
   external it: (string, @this (mocha, done_callback) => unit) => unit = "it"
-  @val @scope("globalThis")
-  external it_only: (string, @this (mocha, done_callback) => unit) => unit = "it.only"
-  @val @scope("globalThis")
-  external it_skip: (string, @this (mocha, done_callback) => unit) => unit = "it.skip"
+  @val @scope(("globalThis", "it"))
+  external it_only: (string, @this (mocha, done_callback) => unit) => unit = "only"
+  @val @scope(("globalThis", "it"))
+  external it_skip: (string, @this (mocha, done_callback) => unit) => unit = "skip"
   @val @scope("globalThis")
   external before: (@this (mocha, done_callback) => unit) => unit = "before"
   @val @scope("globalThis")
@@ -78,10 +78,10 @@ module Async = {
 module Promise = {
   @val @scope("globalThis")
   external it: (string, @this (mocha => promise<'a>)) => unit = "it"
-  @val @scope("globalThis")
-  external it_only: (string, @this (mocha => promise<'a>)) => unit = "it.only"
-  @val @scope("globalThis")
-  external it_skip: (string, @this (mocha => promise<'a>)) => unit = "it.skip"
+  @val @scope(("globalThis", "it"))
+  external it_only: (string, @this (mocha => promise<'a>)) => unit = "only"
+  @val @scope(("globalThis", "it"))
+  external it_skip: (string, @this (mocha => promise<'a>)) => unit = "skip"
   @val @scope("globalThis")
   external before: (@this (mocha => promise<'a>)) => unit = "before"
   @val @scope("globalThis")
