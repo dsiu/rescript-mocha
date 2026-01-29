@@ -1,0 +1,12 @@
+# Source and config files not needed by consumers
+test/
+.github/
+.vscode/
+.idea/
+CLAUDE.md
+AGENTS.md
+changelog.md
+.gitignore
+.yarn/
+.yarnrc.yml
+yarn.lock

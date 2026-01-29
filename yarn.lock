@@ -5,6 +5,15 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@dsiu/rescript-mocha@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@dsiu/rescript-mocha@workspace:."
+  dependencies:
+    mocha: "npm:^10.4.0"
+    rescript: "npm:^12.2.0-rc.1"
+  languageName: unknown
+  linkType: soft
+
 "@isaacs/balanced-match@npm:^4.0.1":
   version: 4.0.1
   resolution: "@isaacs/balanced-match@npm:4.0.1"
@@ -957,15 +966,6 @@ __metadata:
   checksum: 10c0/83aa76a7bc1531f68d92c75a2ca2f54f1b01463cb566cf3fbc787d0de8be30c9dbc211d1d46be3497dac5785fe296f2dd11d531945ac29730643357978966e99
   languageName: node
   linkType: hard
-
-"rescript-mocha@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "rescript-mocha@workspace:."
-  dependencies:
-    mocha: "npm:^10.4.0"
-    rescript: "npm:^12.2.0-rc.1"
-  languageName: unknown
-  linkType: soft
 
 "rescript@npm:^12.2.0-rc.1":
   version: 12.2.0-rc.1

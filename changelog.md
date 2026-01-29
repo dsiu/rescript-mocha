@@ -1,8 +1,13 @@
 ## Unreleased
 
-Before cutting a 1.0 version I'm planning to review the API and look at what is worth updating. ReScript best practices have changed a lot since `bs-mocha` was created 6 years ago.
-
 ## Released
+
+### 0.11.0
+
+- Upgraded to ReScript v12 with ES modules support
+- Changed output suffix to `.res.mjs` (in-source compilation)
+- Removed legacy `uncurried` config (ReScript v12 is uncurried by default)
+- Updated package for npm publishing under `@dsiu/rescript-mocha`
 
 ### 0.10.0
 

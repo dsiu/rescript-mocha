@@ -1,5 +1,5 @@
 # .res and .resi are ReScript
 *.res linguist-language=ReScript
 *.resi linguist-language=ReScript
-# and the bsconfig is jsonc
-bsconfig.json linguist-language=jsonc
+# and the rescript is jsonc
+rescript.json linguist-language=json

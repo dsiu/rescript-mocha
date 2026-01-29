@@ -1,13 +1,13 @@
 {
-  "name": "rescript-mocha",
-  "version": "0.10.0",
+  "name": "@dsiu/rescript-mocha",
+  "version": "0.11.0",
   "description": "ReScript bindings for mocha",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TheSpyder/rescript-mocha.git"
+    "url": "git://github.com/dsiu/rescript-mocha.git"
   },
-  "homepage": "https://github.com/TheSpyder/rescript-mocha",
-  "bugs": "https://github.com/TheSpyder/rescript-mocha/issues",
+  "homepage": "https://github.com/dsiu/rescript-mocha",
+  "bugs": "https://github.com/dsiu/rescript-mocha/issues",
   "scripts": {
     "clean": "rescript clean",
     "build": "rescript",
@@ -24,21 +24,32 @@
     ]
   },
   "keywords": [
-    "BuckleScript",
-    "reason",
-    "ReScript"
+    "rescript",
+    "mocha",
+    "testing",
+    "test"
   ],
   "author": "Andrew Herron",
   "contributors": [
     "Hongbo Zhang",
-    "Risto Stevcev"
+    "Risto Stevcev",
+    "dsiu"
   ],
   "license": "MIT",
+  "files": [
+    "src/**/*.res",
+    "src/**/*.resi",
+    "src/**/*.res.mjs",
+    "rescript.json",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "rescript": "^12.2.0-rc.1"
   },
   "dependencies": {
     "mocha": "^10.4.0"
   },
+  "type": "module",
   "packageManager": "yarn@4.12.0"
 }

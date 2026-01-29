@@ -1,0 +1,24 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # Required for npm Trusted Publishing (OIDC)
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install
+      - run: yarn test
+      # --provenance creates signed attestation linking package to this build
+      # --access public required for scoped packages
+      - run: npm publish --provenance --access public

@@ -27,3 +27,4 @@ lib/
 node_modules/
 *.mjs
 /.yarn/install-state.gz
+.claude/settings.local.json
