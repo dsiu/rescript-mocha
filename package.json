@@ -45,11 +45,11 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "rescript": "^12.2.0"
+    "rescript": "^12.3.0"
   },
   "dependencies": {
     "mocha": "^10.4.0"
   },
   "type": "module",
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.17.0"
 }
